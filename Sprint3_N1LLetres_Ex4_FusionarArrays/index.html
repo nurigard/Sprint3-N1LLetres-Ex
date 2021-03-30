@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Crea una altra array amb el teu cognom on cada posició correspongui a una lletra.
+        Fusiona els dos arrays en un. A més, afegeix una posició amb un espai buit entre la primera i la segona. És a dir, partim de 'array name i surname i al acabar l’execució només tindrem una que es dirà fullName.
+    -->
+    
+    
+    <h2>Fusiona l'array que conté el teu nom amb l'array que conté el teu cognom</h2>
+    
+    <input type="button" onclick="fusionarArrays()" value="FUSIONAR">
+
+    <script>
+
+        function fusionarArrays(){
+
+        let meuNom = ["N", "U", "R", "I", "A"];
+
+        let meuCognom = ["G", "A", "R", "D", "E", "N", "Y", "E", "S"];
+
+       
+        let fullName=[];
+        let i=0;
+        let j=0;
+        let z=0;
+
+        let fullNameLenght = meuNom.length + meuCognom.length;
+
+        do {
+
+            for(i=0; i<meuNom.length; i++){
+                fullName[z] = meuNom[i];
+                z++;
+            }
+
+            fullName[z]="";
+            z++;
+
+            for(j=0; j<meuCognom.length; j++){
+                fullName[z]=meuCognom[j];
+                z++;
+            }
+
+        }
+
+        while (z<fullNameLenght+1); 
+            
+        console.log(fullName);
+
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        Emmagatzemar en un Map les lletres de l'array y el nombre de vegades que apareixen.
+    -->
+
+    <h2>Mostrar quantes vegades apareix cada lletra</h2>
+
+    <input type="button" onclick="mapLletres()" value="MOSTRAR">
+
+    <script>
+
+    function mapLletres() {  
+
+    let meuNom = [];
+
+    meuNom = ["N", "U", "R", "I", "A"];
+
+
+    //Puc inicialitzar el Map amb valors o introduir aquests valors amb setters:
+
+
+    //Inicialitzo el Map amb valors
+    //const nombreLletra = new Map([["N", 1], ["U", 1], ["R", 1], ["I", 1], ["A", 1]]);
+
+
+    const nombreLletra = new Map();
+
+    nombreLletra.set("N", 1);
+    nombreLletra.set("U", 1);
+    nombreLletra.set("R", 1);  
+    nombreLletra.set("I", 1);
+    nombreLletra.set("A", 1);
+
+   console.log(nombreLletra);
+
+
+
+   //Converteixo el Map "nombreLLetra" en un Object
+
+   const object = Object.fromEntries(nombreLletra);
+
+    console.log(object);
+    console.log(JSON.stringify(object));
+
+    }
+
+    </script>   
+
+</body>
+</html>
